@@ -305,9 +305,9 @@ $.extend($.ui.multiselect, {
 		}
 	},
 	locale: {
-		addAll:'Add all',
-		removeAll:'Remove all',
-		itemsCount:'items selected'
+		addAll: i18n('addAll'),
+		removeAll: i18n('removeAll'),
+		itemsCount: i18n('itemsCount')
 	}
 });
 

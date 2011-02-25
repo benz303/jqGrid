@@ -1715,11 +1715,11 @@ $.fn.jqGrid = function( pin ) {
 			if(ts.p.pginput===true) { pginp= "<td dir='"+dir+"'>"+$.jgrid.format(ts.p.pgtext || "","<input class='ui-pg-input' type='text' size='2' maxlength='7' value='0' role='textbox'/>","<span id='sp_1'></span>")+"</td>";}
 			if(ts.p.pgbuttons===true) {
 				var po=["first"+tp,"prev"+tp, "next"+tp,"last"+tp]; if(dir=="rtl") { po.reverse(); }
-				pgl += "<td id='"+po[0]+"' class='ui-pg-button ui-corner-all'><span class='ui-icon ui-icon-seek-first'></span></td>";
-				pgl += "<td id='"+po[1]+"' class='ui-pg-button ui-corner-all'><span class='ui-icon ui-icon-seek-prev'></span></td>";
+				pgl += "<td id='"+po[0]+"' class='ui-pg-button ui-corner-all' title="+i18n('pager_first')+">"+i18n('pager_first')+"</td>";
+				pgl += "<td id='"+po[1]+"' class='ui-pg-button ui-corner-all' title='"+i18n('pager_prev')+"'>"+i18n('pager_prev')+"</td>";
 				pgl += pginp !== "" ? sep+pginp+sep:"";
-				pgl += "<td id='"+po[2]+"' class='ui-pg-button ui-corner-all'><span class='ui-icon ui-icon-seek-next'></span></td>";
-				pgl += "<td id='"+po[3]+"' class='ui-pg-button ui-corner-all'><span class='ui-icon ui-icon-seek-end'></span></td>";
+				pgl += "<td id='"+po[2]+"' class='ui-pg-button ui-corner-all' title='"+i18n('pager_next')+"'>"+i18n('pager_next')+"</td>";
+				pgl += "<td id='"+po[3]+"' class='ui-pg-button ui-corner-all' title='"+i18n('pager_last')+"'>"+i18n('pager_last')+"</td>";
 			} else if (pginp !== "") { pgl += pginp; }
 			if(dir=="ltr") { pgl += str; }
 			pgl += "</tr></tbody></table>";
